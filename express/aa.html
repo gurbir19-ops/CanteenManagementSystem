@@ -1,0 +1,131 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="js/bootstrap.js">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+*{
+margin:0px;
+padding:0px;
+}
+body{
+background-image: url("food.jpg!d");
+background-attachment:fixed;
+background-size:cover;
+font-family:new time roman;
+}
+h1{
+font-size:50px;
+color:white;
+margin-top:30px;
+margin-bottom:60px;
+}
+.col-md-5{
+background: rgba(0,0,0,0.5);
+margin-top: 40px;
+}
+.label{
+font-size:20px;
+font-weight:normal;
+}
+.input-group
+{
+margin-top:10px;
+margin-bottom:20px;
+}
+.input-group-addon{
+background:transparent;
+border-radius:0px;
+border:0px;
+border-bottom:1px solid white;
+font-size:18px;
+color:gray;
+}
+.form-control{
+background:transparent;
+border-radius:0px;
+border:0px;
+border-bottom:1px solid white;
+padding:15px;
+color:white;
+font-size:21px;
+}
+input[type="checkbox"]{
+height:15px;
+width:15px;
+}
+small{
+font-size:18px;
+color:white;
+}
+p{
+font-size:18px;
+color:white;
+}
+.btn-default
+{
+border-radius:0px;
+width:457px;
+font-size:20px;
+margin-top:20px;
+margin-bottom:30px;
+}
+</style>
+</head>
+<body>
+<form>
+<div class="container">
+<div class="row">
+<div class="col-md-5">
+<h1 class="text-center">SIGN UP</h1>
+<label class="label control-label">Name</label>
+<div class="input-group">
+<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+<input type="text" class="form-control" name="Name" placeholder="Name" required>
+</div>
+<label class="label control-label">E-mail</label>
+<div class="input-group">
+<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+<input type="email" class="form-control" name="mail" placeholder="E-mail" required>
+</div>
+<label class="label control-label">Contact</label>
+<div class="input-group" required>
+<span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+<input type="number" class="form-control" name="Contact" placeholder="Contact" required>
+</div>
+<label class="label control-label">Password</label>
+<div class="input-group" required>
+<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+<input type="Password" class="form-control" name="Password" placeholder="Password" id="pwd" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+</div>
+<label class="label control-label">Re-type Password</label>
+<div class="input-group" required>
+<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+<input type="Password" class="form-control" name="Re-type Password" id="cpwd" placeholder="Re-type Password" required>
+</div>
+<center><button class="btn btn-primary btn-lg" type="submit" onclick="f()">SIGN-UP</button></center>
+</div>
+</div>
+</div>
+</form>
+</body>
+<script>
+function f()
+{
+var x=document.getElementById("pwd");
+var y=document.getElementById("cpwd");
+if(x.value==y.value && x.value!="" && y.value!="")
+{
+alert("Details Confirmed!!");
+}
+if(x.value!=y.value)
+{
+alert("Password Confirmation Failed!!");
+}
+}
+</script>
+</html>

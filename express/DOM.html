@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Canteen orders</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+table, th, td {
+  border: 5px;
+border-collapse:collapse;
+padding:15px;
+}
+th,td{
+border-bottom:1px solid black;
+}
+#order tr:hover {background-color: #ddd;}
+
+</style>
+</head>
+
+<body style="background-color:black;color:white;width:1500px" align="center">
+<nav class="navbar navbar-inverse " style="background-color:black;margin-top:20px">
+<img class="navbar-brand" src="food-1.png" style="width:150px;height:90px;margin-left:80px"></a>
+    <ul class="nav navbar-nav" style="margin-left:450px">
+      <li><a href="proj3.html">Add Food Items</a></li>
+      <li><a href="breakfast.html">Manage Items</a></li>
+      <li class="active"><a href="DOM.html">New Orders</a></li>
+      <li><a href="index.html">Logout</a></li>
+    </ul> 
+  </div>
+</nav><br>
+
+<div style="background-color:white;width:1300px;height:600px;margin-left:120px;color:black">
+<h1 align="center">New Orders</h1>
+<br>
+<center>
+<table width="70%" id="order">
+<tr style="background-color:grey;color:white">
+<th>UserID</th>
+<th>Name</th>
+<th>FoodOrder</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Total</th>
+<th>Date and Time</th>
+<th>Status</th>
+</tr>
+ <tr>
+    <td>4</td>
+    <td>Nitika</td>
+    <td>Chocolate Shake</td>
+    <td>60</td>
+    <td>1</td>
+    <td>60</td>
+    <td>10/03/2018 13:35PM</td>
+    <td><input type="button" value="Accept" onclick="deleteRow(this)"></td>
+  </tr>
+  <tr>
+     <td>2</td>
+    <td>Jyotsna</td>
+    <td>Masala Dosa</td>
+    <td>120</td>
+    <td>1</td>
+    <td>120</td>
+    <td>10/03/2018 13:45PM</td>
+    <td><input type="button" value="Accept" onclick="deleteRow(this)"></td>
+  </tr>
+<footer style="color:white">&copy; Copyright 2020 Canteen.com</footer>
+</center>
+<script>function deleteRow(r) {
+  var i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("order").deleteRow(i);
+}</script>
+</body>
+</html>
